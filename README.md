@@ -2,7 +2,7 @@
 
 Implement your own rarity tools using this template.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Fmyreceipt%2Frotybroi-rarity&project-name=rotybroi-rarity&repo-name=rotybroi-rarity)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Fmyreceiptt%2Frotybroi-rarity&project-name=rotybroi-rarity&repo-name=rotybroi-rarity)
 
 References:
 
