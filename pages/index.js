@@ -10,7 +10,6 @@ import { TraitFilters } from "../components/TraitFilters";
 import { Footer } from "../components/Footer";
 import { config } from "../config";
 import { getFilters, getNFTs } from "../util/requests";
-import { Analytics } from "@vercel/analytics/react";
 
 function Home({ title, img, description, nfts, pages, filters }) {
   const router = useRouter();
@@ -28,8 +27,6 @@ function Home({ title, img, description, nfts, pages, filters }) {
         <title>{title}</title>
         <link rel="icon" href="/1.47.png" />
       </Head>
-
-      <Analytics />
 
       <NextSeo
         title={title}
