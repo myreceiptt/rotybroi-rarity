@@ -26,6 +26,7 @@ function Home({ title, img, description, nfts, pages, filters }) {
       <Head>
         <title>{title}</title>
         <link rel="icon" href="/1.47.png" />
+        <link rel="canonical" href="https://rotyrarity.endhonesa.com/" />
       </Head>
 
       <NextSeo
