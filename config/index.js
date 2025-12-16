@@ -1,7 +1,7 @@
 export const config = {
   env: "prod",
-  LOCAL_API_URL: "localhost:3000",
-  API_URL: "rotyrarity.endhonesa.com",
+  LOCAL_API_URL: "http://localhost:3000",
+  API_URL: "https://rotyrarity.endhonesa.com",
   COLLECTION_NAME: "The ROTY BROI NFTs Rarity Rank",
   COLLECTION_TITLE: "The ROTY BROI NFTs Rarity Rank",
   COLLECTION_DESCRIPTION:
