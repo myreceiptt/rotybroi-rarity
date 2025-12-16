@@ -38,6 +38,8 @@ This repo is intended to stay evergreen while remaining production-safe.
    - ~~pnpm audit~~
    - ~~npm audit~~
    - `yarn build`
+   - ~~pnpm build~~
+   - ~~npm run build~~
 4. Deploy:
    - **Vercel auto-deploy from `main`**
    - ~~manual deploy according to platform workflow~~
