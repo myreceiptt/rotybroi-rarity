@@ -6,20 +6,33 @@ let basePath =
     ? `http://${config.LOCAL_API_URL}`
     : `https://${config.API_URL}`;
 
+const internalBase =
+  typeof window === "undefined"
+    ? process.env.VERCEL_URL
+      ? `https://${process.env.VERCEL_URL}`
+      : "http://localhost:3000"
+    : "";
+
 export const getNFT = async (id) => {
-  const res = await fetch(`${basePath}/api/nft?id=${id}`);
+  // const res = await fetch(`${basePath}/api/nft?id=${id}`);
+  // const res = await fetch(`/api/nft?id=${id}`);
+  const res = await fetch(`${internalBase}/api/nft?id=${id}`);
   const data = await res.json();
   return data;
 };
 
 export const getNFTs = async (query) => {
-  const res = await fetch(`${basePath}/api/nfts?${json2query(query)}`);
+  // const res = await fetch(`${basePath}/api/nfts?${json2query(query)}`);
+  // const res = await fetch(`/api/nfts?${json2query(query)}`);
+  const res = await fetch(`${internalBase}/api/nfts?${json2query(query)}`);
   const data = await res.json();
   return data;
 };
 
 export const getFilters = async (query) => {
-  const res = await fetch(`${basePath}/api/filters?${json2query(query)}`);
+  // const res = await fetch(`${basePath}/api/filters?${json2query(query)}`);
+  // const res = await fetch(`/api/filters?${json2query(query)}`);
+  const res = await fetch(`${internalBase}/api/filters?${json2query(query)}`);
   const data = await res.json();
   return data;
 };
