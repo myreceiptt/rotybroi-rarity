@@ -1,132 +1,133 @@
 # Rarity Score Template
 
-Implement your own rarity tools using this template.
+---
+
+---
+
+## Maintenance by Prof. NOTA Evergreen Standard
+
+This repo is intended to stay evergreen while remaining production-safe.
+
+### Runtime
+
+- Node: 24.x (see `.nvmrc` and `package.json#engines`)
+- Package manager: Yarn (lockfile: `yarn.lock`)
+
+### Monthly Safe Updates (recommended)
+
+1. Check what’s outdated:
+   - `yarn outdated`
+2. Upgrade safe (patch/minor) versions:
+   - `yarn upgrade`
+   - or upgrade specific packages shown as non-major
+3. Verify:
+   - `yarn audit --level moderate`
+   - `yarn build`
+4. Deploy (Vercel auto-deploy from `main`)
+
+### Major Updates (quarterly / scheduled)
+
+Major upgrades (Next/React/Tailwind) must be done one at a time with a dedicated PR and full testing.
+
+---
+
+---
+
+Deployable Next.js template for building NFT rarity tools.
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Fmyreceiptt%2Frotybroi-rarity&project-name=rotybroi-rarity&repo-name=rotybroi-rarity)
 
-References:
+## Features
 
-- https://raritytools.medium.com/ranking-rarity-understanding-rarity-calculation-methods-86ceaeb9b98c
-- https://github.com/punkscape/01-rarity-analyser-hackathon
+- List NFTs from JSON data in `data/collection.json`.
+- Filter NFTs by traits and attributes.
+- Share NFTs by `token_id` with rarity score, rank, and price details.
+- Automatic deployments when using Vercel.
+- Responsive layouts across pages.
 
-# Needs
+## Audience Needs
 
-Who is this project for and what are their needs?
+**Creators**: Save fees, sell collections, build community, generate hype, deploy easily.  
+**Buyers**: Trade NFTs, buy low, sell high, collect drops.  
+**Developers**: Clear documentation and easy iteration.
 
-**Creator**: Person who is making the NFT collection
-
-- Save fees
-- Sell collection
-- Build community
-- Generate hype
-- Easily deploy
-
-**Buyer**: People who have bought the nft
-
-- Trade nft
-- Buy low
-- Sell high
-- Collect drops
-
-**Developers**: People who maintain this project
-
-- Clear documentation
-- Easily iterate
-
-# Features
-
-- List NFTs from JSON (`data/collection.json`).
-- Filter NFTs based on traits, attributes.
-- Share NFT for `token_id`: Display rarity score, rarity rank and price (useful for buyers)
-- If you deploy using Vercel, changes are deployed automatically.
-
-PS: All webpages are responsive
-
-# How to use
-
-Once you have deployed, you need to change the following for your use:
-
-Using locally:
-
-1. Install packages
-
-```
-yarn install
-```
-
-2. Change the JSON in `data/collection.json` to your collection.json. If there is an error, raise it as an issue. JSON follows [opensea standards](https://docs.opensea.io/docs/metadata-standards)
-
-3. Change `config/index.js`:
-
-- `env` : If you're using locally set it to `local`, while deploying set it to `prod`.
-- `LOCAL_API_URL`: Port at which app is running locally. Default value of `http://localhost:3000`
-- `API_URL`: Your vercel URL (when you deploy)
-- `COLLECTION_NAME`: Opensea collection name "OneDayPunks" is an example
-- `COLLECTION_TITLE`: This is for the website title (for SEO)
-- `COLLECTION_DESCRIPTION`: og:description (for SEO)
-- `COLLECTION_IMG_LINK`: og:image for website (for SEO)
-
-[Reference for SEO](https://www.heymeta.com/url/odp-rarity.vercel.app)
-
-4. Running it locally
-
-```
-yarn run dev
-```
-
-# Stack
+## Tech Stack
 
 - [Next.js](https://nextjs.org/docs)
 - [Tailwind CSS](https://tailwindcss.com/)
 
-# Fetching updates
+## Getting Started
 
-From time to time, I push updates if you want to update your repo with those changes:
+1. Install dependencies:
 
-```
+   ```bash
+   yarn install
+   ```
+
+2. Replace `data/collection.json` with your collection data (follows [OpenSea metadata standards](https://docs.opensea.io/docs/metadata-standards)). If you hit errors, open an issue.
+
+3. Configure `config/index.js`:
+
+   | Key                      | Description                                                | Example                       |
+   | ------------------------ | ---------------------------------------------------------- | ----------------------------- |
+   | `env`                    | Use `local` for local development, `prod` for deployments. | `prod`                        |
+   | `LOCAL_API_URL`          | URL where the app runs locally.                            | `http://localhost:3000`       |
+   | `API_URL`                | Your deployed Vercel URL.                                  | `https://your-app.vercel.app` |
+   | `COLLECTION_NAME`        | OpenSea collection name.                                   | `OneDayPunks`                 |
+   | `COLLECTION_TITLE`       | Page title (SEO).                                          | `Rarity Score`                |
+   | `COLLECTION_DESCRIPTION` | OpenGraph description (SEO).                               | `Discover rarity scores`      |
+   | `COLLECTION_IMG_LINK`    | OpenGraph image (SEO).                                     | `https://your-app/image.png`  |
+
+   SEO helper: [HeyMeta.Com](https://www.heymeta.com/url/odp-rarity.vercel.app)
+
+4. Run locally:
+
+   ```bash
+   yarn run dev
+   ```
+
+## Deployment
+
+- Use the Vercel button above or deploy manually to your own Vercel project.
+- Set `env` to `prod` and point `API_URL` to the deployed URL.
+
+## Updating from Upstream
+
+Pull the latest changes from the template repository:
+
+```bash
 git remote add upstream https://github.com/nishantrpai/rarity-score.git
 git fetch upstream
 git merge upstream/main
 ```
 
-That'll bring you all the latest changes from the repo.
+## Support
 
-# 😫 Having issues?
+Having issues? Reach out on [Twitter](https://twitter.com/PaiNishant) or [Discord](https://discordapp.com/users/nishu#4633). This is a paid service.
 
-Reach out to me on [Twitter](https://twitter.com/PaiNishant) or [Discord](https://discordapp.com/users/nishu#4633), will deploy it for you.
+## Past Deployments
 
-PS: This is a paid service.
+- [Larp Island](https://larpisland.vercel.app) — [announcement tweet](https://twitter.com/larpisland/status/1504951132501643268)
+- [Coffee Club NFTs](https://rarity.thecoffeeclub.io/) — [announcement tweet](https://twitter.com/CoffeeClubNFTs/status/1506071804074471425)
 
-## 🧾 Have I done it before?
+## How It Works
 
-Yes, deployed it for:
+1. Exchange greetings and complete payment.
+2. Share project details and GitHub access.
+3. Validate/fix JSON, ensure everything works, and provide updates.
+4. Deliver the rarity score site; you share feedback or a shoutout.
 
-- [Larp Island](https://larpisland.vercel.app):
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Every Islander is special, but some are more special than others ... <br><br>Our custom-built open-source rarity tool is now live. Enjoy!<br><br>Hat-tip to buildooor 🛠️ <a href="https://twitter.com/PaiNishant?ref_src=twsrc%5Etfw">@PaiNishant</a> for his code and his guidance and for being a legend 👊<a href="https://t.co/7WytxK1jPH">https://t.co/7WytxK1jPH</a></p>&mdash; Larp Island 🏝 (@larpisland) <a href="https://twitter.com/larpisland/status/1504951132501643268?ref_src=twsrc%5Etfw">March 18, 2022</a></blockquote>
+## References
 
-- [Coffee Club NFTs](https://rarity.thecoffeeclub.io/)
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Each Coffee Club Cup is unique, just like YOU.. ☕️<br><br>A huge s/o to the one and only <a href="https://twitter.com/PaiNishant?ref_src=twsrc%5Etfw">@PaiNishant</a> for assisting me with our brand new, open-source rarity ranking tool. <br><br>You can check your Cups ranking here:<a href="https://t.co/l6gN1tbeoY">https://t.co/l6gN1tbeoY</a> <a href="https://t.co/VEA7X4nwoO">https://t.co/VEA7X4nwoO</a> <a href="https://t.co/t1yLPtu63c">pic.twitter.com/t1yLPtu63c</a></p>&mdash; Coffee Club NFTs (@CoffeeClubNFTs) <a href="https://twitter.com/CoffeeClubNFTs/status/1506071804074471425?ref_src=twsrc%5Etfw">March 22, 2022</a></blockquote>
+- [Medium](https://raritytools.medium.com/ranking-rarity-understanding-rarity-calculation-methods-86ceaeb9b98c)
+- [GitHub](https://github.com/punkscape/01-rarity-analyser-hackathon)
 
-## ▶️ How does it work?
+## Socials
 
-0. Exchange greetings, finish payments.
+Follow [\_rarityscore](https://twitter.com/_rarityscore) on Twitter for updates.
 
-1. I'll request you for project related details, github creds.
+## Donate
 
-2. Fix the json (if any errors), ensure everything is working and update you along
-
-3. Tell me any issues you have, can add custom fixes.
-
-4. You get the rarity score for your project, you are extremely happy and leave a tweet that tells everyone how great this service was 🍻
-
-# Socials
-
-Follow [\_rarityscore](https://twitter.com/_rarityscore) on twitter for updates.
-
-# Donate
-
-- Solana: 9dPN7gdN9cyGhjiQn5gBU9DQDBxUJafvS873BcW3mpFT
-
-- Ethereum: 0x5A8064F8249D079f02bfb688f4AA86B6b2C65359
-
-- ENS for donating: nishantpai.eth
+- Solana: `9dPN7gdN9cyGhjiQn5gBU9DQDBxUJafvS873BcW3mpFT`
+- Ethereum: `0x5A8064F8249D079f02bfb688f4AA86B6b2C65359`
+- ENS: `nishantpai.eth`
