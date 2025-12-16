@@ -9,7 +9,7 @@
     "test": "echo 'triggering a test script'"
   },
   "engines": {
-    "node": "18.x"
+    "node": "24.x"
   },
   "dependencies": {
     "@vercel/analytics": "^1.2.2",
