@@ -21,12 +21,12 @@
     "use-react-screenshot": "^1.0.2"
   },
   "devDependencies": {
-    "autoprefixer": "^10.2.6",
+    "autoprefixer": "^10.4.20",
     "husky": ">=6",
     "lint-staged": ">=10",
-    "postcss": "^8.3.5",
+    "postcss": "^8.4.49",
     "prettier": "2.4.1",
-    "tailwindcss": "^2.2.4"
+    "tailwindcss": "^3.4.17"
   },
   "lint-staged": {
     "*.{js,css,md}": "prettier --write"
