@@ -9,7 +9,7 @@ import Navbar from "../components/Navbar";
 import { TraitFilters } from "../components/TraitFilters";
 import { Footer } from "../components/Footer";
 import { config } from "../config";
-import { getFilters, getNFTs } from "../util/requests";
+import { getFilters as calcFilters, getNFTs as calcNFTs } from "../util/nfts";
 
 function Home({ title, img, description, nfts, pages, filters }) {
   const router = useRouter();
@@ -74,8 +74,25 @@ function Home({ title, img, description, nfts, pages, filters }) {
 }
 
 Home.getInitialProps = async ({ query }) => {
-  let { nfts = [], pages } = await getNFTs(query);
-  let filters = await getFilters(query);
+  const {
+    page_id = 0,
+    sort_by = "rarity_score",
+    order = "desc",
+    traits = "",
+    attr_count = "",
+    query: searchQuery,
+  } = query;
+
+  const traitsArray = traits.split(",").filter((val) => val);
+  const { nfts, pages } = calcNFTs(
+    page_id,
+    sort_by,
+    order,
+    traitsArray,
+    attr_count,
+    searchQuery
+  );
+  const filters = calcFilters(traitsArray, attr_count);
   return {
     title: config.COLLECTION_TITLE,
     description: config.COLLECTION_DESCRIPTION,
