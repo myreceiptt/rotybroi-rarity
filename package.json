@@ -17,7 +17,7 @@
   "dependencies": {
     "@vercel/analytics": "1.6.1",
     "html2canvas": "1.4.1",
-    "next": "14.2.35",
+    "next": "^16.1.0",
     "next-seo": "4.29.0",
     "react": "^19.2.3",
     "react-debounce-input": "3.3.0",
