@@ -6,7 +6,8 @@
     "start": "next start",
     "prepare": "husky install",
     "pre-commit": "lint-staged",
-    "test": "echo 'triggering a test script'"
+    "test": "echo 'triggering a test script'",
+    "outdated": "YARN_IGNORE_PATH=1 yarn outdated"
   },
   "resolutions": {
     "braces": "^3.0.3"
@@ -27,15 +28,16 @@
     "use-react-screenshot": "^4.0.0"
   },
   "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.18",
     "autoprefixer": "^10.4.20",
     "husky": "9.1.7",
     "lint-staged": "^16.2.7",
     "postcss": "^8.4.49",
     "prettier": "^3.7.4",
-    "tailwindcss": "^4.1.18",
-    "@tailwindcss/postcss": "^4.1.18"
+    "tailwindcss": "^4.1.18"
   },
   "lint-staged": {
     "*.{js,css,md}": "prettier --write"
-  }
+  },
+  "packageManager": "yarn@4.12.0"
 }
