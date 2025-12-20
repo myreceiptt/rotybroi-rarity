@@ -22,7 +22,7 @@
     "react": "^19.2.3",
     "react-debounce-input": "3.3.0",
     "react-dom": "^19.2.3",
-    "react-icons": "4.12.0",
+    "react-icons": "^5.5.0",
     "swr": "^2.3.8",
     "use-react-screenshot": "1.1.0"
   },
