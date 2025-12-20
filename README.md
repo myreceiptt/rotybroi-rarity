@@ -13,7 +13,7 @@ This repo is intended to stay evergreen while remaining production-safe.
 - Node: **24.x** (see `.nvmrc` and `package.json#engines`)
   - ~~example alternatives: 22.x / 20.x (adjust if platform requires)~~
 - Package manager:
-  - **Yarn** (lockfile: `yarn.lock`)
+  - **Yarn** (lockfile: `yarn.lock`, repo-pinned to `yarn@4.12.0`)
   - ~~PNPM (lockfile: `pnpm-lock.yaml`)~~
   - ~~NPM (lockfile: `package-lock.json`)~~
 - Deploy target:
