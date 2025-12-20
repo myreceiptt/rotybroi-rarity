@@ -1029,10 +1029,10 @@ update-browserslist-db@^1.2.0:
     escalade "^3.2.0"
     picocolors "^1.1.1"
 
-use-react-screenshot@1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/use-react-screenshot/-/use-react-screenshot-1.1.0.tgz#cd873f1a302c2705cfaf4039e5586e9326b4d124"
-  integrity sha512-6MR6ZpUOq4hWrHCGE5xNUP4ItE8ui1oRmYaDmtw2GcbgyBo1vr8P8VXnJhgJy0aTsUTHkzR3XQNYv8HWLtEHIw==
+use-react-screenshot@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/use-react-screenshot/-/use-react-screenshot-4.0.0.tgz#8be533e0790e75c8fd72174ed523c2ed86c967fc"
+  integrity sha512-4UZIORp7iCklfNOS/dPJab9SPeGdS0nFyIi3qA1rfMyYf/em/KfodYhrOlSHAHWvfdeCrS67Jjk6H4M4oLYSWg==
 
 use-sync-external-store@^1.6.0:
   version "1.6.0"
