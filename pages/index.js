@@ -1,6 +1,6 @@
 import Head from "next/head";
 import React, { createRef, useState } from "react";
-import { NextSeo } from "next-seo";
+import { generateNextSeo } from "next-seo/pages";
 import { useRouter } from "next/router";
 import { NFT } from "../components/NFT";
 import { SideBar } from "../components/SideBar";
@@ -29,21 +29,21 @@ function Home({ title, img, description, nfts, pages, filters }) {
         <link rel="canonical" href="https://rotyrarity.endhonesa.com/" />
       </Head>
 
-      <NextSeo
-        title={title}
-        openGraph={{
+      {generateNextSeo({
+        title,
+        openGraph: {
           images: [
             {
               url: img,
             },
           ],
-        }}
-        twitter={{
+        },
+        twitter: {
           image: img,
           cardType: "summary_large_image",
-        }}
-        description={description}
-      />
+        },
+        description,
+      })}
       <Navbar
         title={title}
         menu={true}

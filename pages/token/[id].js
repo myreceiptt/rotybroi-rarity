@@ -1,6 +1,7 @@
 import { formatIpfsUrl, formatPrice, getDesc } from "../../util";
 import { FiArrowLeft } from "react-icons/fi";
-import { NextSeo } from "next-seo";
+import Head from "next/head";
+import { generateNextSeo } from "next-seo/pages";
 import { getNFT, getNFTInfo } from "../../util/requests";
 import { useRouter } from "next/router";
 import Navbar from "../../components/Navbar";
@@ -44,20 +45,22 @@ function NFT({ nft, title }) {
         className="flex flex-col items-center justify-center 
       min-h-screen bg-gray-100"
       >
-        <NextSeo
-          title={nft?.name}
-          openGraph={{
-            images: [
-              {
-                url: img_url,
-              },
-            ],
-          }}
-          twitter={{
-            cardType: "summary_large_image",
-          }}
-          description={getDesc(nft)}
-        />
+        <Head>
+          {generateNextSeo({
+            title: nft?.name,
+            openGraph: {
+              images: [
+                {
+                  url: img_url,
+                },
+              ],
+            },
+            twitter: {
+              cardType: "summary_large_image",
+            },
+            description: getDesc(nft),
+          })}
+        </Head>
         <Navbar title={title} />
         <div className="flex mb-4 items-start w-full cursor-pointer">
           <a
