@@ -112,6 +112,13 @@ Deployable Next.js template for building NFT rarity tools.
    yarn run dev
    ```
 
+5. Optional checks:
+
+   ```bash
+   yarn lint
+   yarn build
+   ```
+
 ## Deployment
 
 - Use the Vercel button above or deploy manually to your own Vercel project.
