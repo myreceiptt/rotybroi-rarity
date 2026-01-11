@@ -13,7 +13,7 @@ This repo is intended to stay evergreen while remaining production-safe.
 - Node: **24.x** (see `.nvmrc` and `package.json#engines`)
   - ~~example alternatives: 22.x / 20.x (adjust if platform requires)~~
 - Package manager:
-  - **Yarn** (lockfile: `yarn.lock`, repo-pinned to `yarn@4.12.0`)
+  - **Yarn** (lockfile: `yarn.lock`)
   - ~~PNPM (lockfile: `pnpm-lock.yaml`)~~
   - ~~NPM (lockfile: `package-lock.json`)~~
 - Deploy target:
@@ -25,16 +25,16 @@ This repo is intended to stay evergreen while remaining production-safe.
 ### Monthly Safe Updates (recommended)
 
 1. Check what’s outdated:
-   - `yarn up -i` (interactive list; select patch/minor only)
+   - `yarn outdated`
    - ~~pnpm outdated~~
    - ~~npm outdated~~
 2. Upgrade safe (patch/minor) versions:
-   - `yarn up` (patch/minor only)
+   - `yarn upgrade`
    - ~~pnpm update~~
    - ~~npm update~~
    - or upgrade specific packages shown as non-major
 3. Verify:
-   - `yarn npm audit --severity moderate`
+   - `yarn audit --level moderate`
    - ~~pnpm audit~~
    - ~~npm audit~~
    - `yarn build`
